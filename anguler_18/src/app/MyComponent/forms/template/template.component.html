@@ -1,0 +1,107 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+  <h1>Template Form</h1>
+  <p>Using ngModel</p>
+</div>
+<div class="row">
+  <div class="col-6">
+    <form class="row g-3" #form="ngForm">
+      <div class="col-md-4">
+        <label for="" class="form-label">First Name</label>
+        <input
+          type="text"
+          #fName="ngModel"
+          required
+          minlength="3"
+          [(ngModel)]="studentObj.firstName"
+          class="control-form"
+          name="firstName"
+        />
+      </div>
+      <div class="text-danger">
+        @if((fName.touched || fName.dirty) && fName.errors?.['required']){
+        <span>This is Required</span>
+        }@else if ((fName.touched || fName.dirty) &&
+        fName.errors?.['minlength']){
+        <span>Min 3 Char Required</span>
+        }
+      </div>
+      <div class="col-md-4">
+        <label for="" class="form-label">Last Name</label>
+        <input
+          type="text"
+          [(ngModel)]="studentObj.lastName"
+          class="control-form"
+          name="lastName"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="" class="form-label">Username</label>
+        <input
+          type="text"
+          [(ngModel)]="studentObj.userName"
+          class="control-form"
+          name="userName"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="" class="form-label">City</label>
+        <input
+          type="text"
+          name="city"
+          [(ngModel)]="studentObj.city"
+          class="control-form"
+        />
+      </div>
+      <div class="col-md-3">
+        <label for="" class="form-label">State</label>
+        <select [(ngModel)]="studentObj.state" name="state" class="form-select">
+          <option selected disabled value="">Choose...</option>
+          <option value="">Maharashtra</option>
+          <option value="">Goa</option>
+          <option value="">Gujrat</option>
+          <option value="">Mumbai</option>
+          <option value="">J&K</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="" class="form-label">Zip</label>
+        <input
+          type="text"
+          required
+          [(ngModel)]="studentObj.zipCode"
+          name="zipCode"
+          class="control-form"
+        />
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            type="checkbox"
+            [(ngModel)]="studentObj.isAcceptTerms"
+            class="form-check-input"
+            name="isAcceptTerms"
+          />
+          <label for="invalidCheck" class="form-check-label">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-secondary" type="button" (click)="resetForm()">
+          Reset Form
+        </button>
+        <button
+          class="btn btn-primary mx-2"
+          type="button"
+          [disabled]="form.invalid"
+          (click)="onSubmit()"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="col-4">
+    {{ formValue | json }}
+  </div>
+</div>

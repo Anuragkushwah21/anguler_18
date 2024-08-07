@@ -8,6 +8,10 @@ import { IfelseComponent } from './MyComponent/controlFlow/ifelse/ifelse.compone
 import { ForComponent } from './MyComponent/controlFlow/for/for.component';
 import { SwitchComponent } from './MyComponent/controlFlow/switch/switch.component';
 import { PipeComponent } from './MyComponent/pipe/pipe.component';
+import { TemplateComponent } from './MyComponent/forms/template/template.component';
+import { ReactiveComponent } from './MyComponent/forms/reactive/reactive.component';
+import { GetapiComponent } from './MyComponent/apiIntigration/getapi/getapi.component';
+import { PostapiComponent } from './MyComponent/apiIntigration/postapi/postapi.component';
 
 export const routes: Routes = [
   {
@@ -45,5 +49,21 @@ export const routes: Routes = [
   {
     path:'pipe',
     component:PipeComponent
+  },
+  {
+    path:'template-form',
+    component:TemplateComponent
+  },
+  {
+    path:'reacting-form',
+    component:ReactiveComponent
+  },
+  {
+    path:'get-api',
+    component:GetapiComponent
+  },
+  {
+    path:'post-api',
+    component:PostapiComponent
   }
 ];

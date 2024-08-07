@@ -18,36 +18,62 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/emp-list">Employee List</a>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >Employee</a
+          >
+          <ul class="dropdown-menu">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/add-emp"
+                >Add Employee</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/emp-list"
+                >Employee List</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/add-emp">Add Employee</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/data-binding">Data Binding</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/if-else">If Else</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/for">For</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/switch">Switch</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/structural-dir"
-            >Structural Directive</a
+          <a class="nav-link text-white" routerLink="/data-binding"
+            >Data Binding</a
           >
         </li>
-        <li class="nav-item active">
-          <a class="nav-link text-white" routerLink="/attribute-dir"
-            >Attribute Directive</a
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >Directive</a
           >
+          <ul class="dropdown-menu">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/structural-dir"
+                >Structural Directive</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/attribute-dir"
+                >Attribute Directive</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ControlFlow</a>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >ControlFlow</a
+          >
           <ul class="dropdown-menu">
             <li class="nav-item active">
               <a class="nav-link text-dark" routerLink="/if-else">If Else</a>
@@ -63,6 +89,44 @@
         <li class="nav-item active">
           <a class="nav-link text-white" routerLink="/pipe">Pipe</a>
         </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >Forms</a
+          >
+          <ul class="dropdown-menu">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/template-form"
+                >Template</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/reacting-form"
+                >Reacting</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            >API-httpClint</a
+          >
+          <ul class="dropdown-menu">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/get-api">Get</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link text-dark" routerLink="/post-api">Post</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </div>
   </nav>
@@ -70,4 +134,3 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
-
